@@ -11,14 +11,23 @@ tweets = [
     "Apple announces the release of the new iPhone 12. Fans are excited.",
     "Spent my day with family!! #happy",
     "Check out my blog post on common string operations in Python. #zerotopandas",
-    "Freecodecamp has great coding tutorials. #skillup"
+    "Freecodecamp has great coding tutorials. #skillup",
 ]
 
-happy_words=['great', 'excited', 'happy', 'nice', 'wonderful', 'amazing', 'good', 'best']
-sad_words=['sad', 'bad', 'tragic', 'unhappy', 'worst']
+happy_words = [
+    "great",
+    "excited",
+    "happy",
+    "nice",
+    "wonderful",
+    "amazing",
+    "good",
+    "best",
+]
+sad_words = ["sad", "bad", "tragic", "unhappy", "worst"]
 
-COUNT_HAPPY_TWEETS=int()
-COUNT_SAD_TWEETS=int()
+COUNT_HAPPY_TWEETS = 0
+COUNT_SAD_TWEETS = 0
 
 for tweet in tweets:
     for word in happy_words:
@@ -28,10 +37,10 @@ for tweet in tweets:
         if word in tweet:
             COUNT_SAD_TWEETS = COUNT_SAD_TWEETS + 1
 print(f"Number of happy tweets: {COUNT_HAPPY_TWEETS}")
-HAPPY_FRACTION = COUNT_HAPPY_TWEETS/len(tweets)
+HAPPY_FRACTION = COUNT_HAPPY_TWEETS / len(tweets)
 print(f"The fraction of happy tweets is: {HAPPY_FRACTION}")
 print(f"Number of sad tweets: {COUNT_SAD_TWEETS}")
-SAD_FRACTION = COUNT_SAD_TWEETS/len(tweets)
+SAD_FRACTION = COUNT_SAD_TWEETS / len(tweets)
 print(f"The fraction of sad tweets is: {SAD_FRACTION}")
 SENTIMENT_SCORE = COUNT_HAPPY_TWEETS - COUNT_SAD_TWEETS
 print(f"The sentiment score for the given tweets is {SENTIMENT_SCORE}")
